@@ -1,0 +1,15 @@
+<h1>profile Page</h1>
+
+{{messages}}
+<form method="post" action="/customer/updateData" >
+    {{!-- <input type="text" name="_id" value="{{this._id}}" hidden> --}}
+    <label for="">Name</label>
+    <input type="text" name="name" value="{{data.name}}">
+    <label for="">email</label>
+    <input type="email" name="username" value="{{data.username}}">
+    <label for="">password</label>
+    <input type="text" name="password">
+    <input type="submit" value="Update">
+
+</form>
+<a href="/customer/logout" class="btn btn-danger">logout</a>

@@ -1,0 +1,35 @@
+<div class="container">
+
+<h2>customer List</h2>
+    <table class="table">
+
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Active</th>
+        </tr>
+
+        {{#each customer}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.username}}</td>
+          
+
+            {{#if this.isactive}}
+                <td class="text text-success">true </td>
+                <td><a href="/admin/updatecustomer/{{this._id}}/{{this.isactive}}" onclick="return confirm('Are you sure?')">change</a></td>
+            {{else}}
+            <td class="text text-danger">False</td>
+            <td><a href="/admin/updatecustomer/{{this._id}}/{{this.isactive}}"  onclick="return confirm('Are you sure?')" >change</a></td>
+            {{/if}}
+
+            
+            <td></td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<a href="/admin/addadmin" class="btn btn-primary">Add Admin</a>
+<a href="/admin/showadmin" class="btn btn-info">show Admin List</a>
+
+<a href="/admin/logout" class="btn btn-danger">logout</a>

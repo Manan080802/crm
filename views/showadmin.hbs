@@ -1,0 +1,19 @@
+<div class="container">
+
+    <table class="table">
+        <tr>
+            <th>name</th>
+            <th>email</th>
+        </tr>
+        {{#each admin}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.username}}</td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
+<a href="/admin/addadmin" class="btn btn-primary">Add Admin</a>
+{{!-- <a href="/admin/showadmin" class="btn btn-info">show Admin List</a> --}}
+
+<a href="/admin/logout" class="btn btn-danger">logout</a>
